@@ -7,7 +7,7 @@ int main(){
   // v2.pop_back(); //O(1)
   // v2.pop_back();//O(1)
   v2.insert(v2.begin()+2, v3.begin(), v3.end()); //O(N+K)
-  v2.erase(v2.begin()+1, v2.end()-1);
+  // v2.erase(v2.begin()+1, v2.end()-1);
   replace(v3.begin(), v3.end()-1, 100, 10);
   for(int x:v2){
     cout << x << " ";
@@ -19,6 +19,8 @@ int main(){
   cout << endl;
   auto it = find(v.begin(), v.end(), 100);
   auto itr = find(v.begin(), v.end(), 3);
+  cout << *it << endl;
+  cout << *itr << endl;
 
   if(it == v.end()){
     cout << "Not Found" << endl;
@@ -32,5 +34,10 @@ int main(){
   else{
     cout << "Found" << endl;
   }
+  // vector element access
+  cout << v2[2] << endl;
+  cout << v2.back() << endl;
+  cout << v2.front() << endl;
+
   return 0;
 }
